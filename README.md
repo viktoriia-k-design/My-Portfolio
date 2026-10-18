@@ -6,9 +6,13 @@ I’m a Senior Product Designer with 9+ years of experience designing digital pr
 
 ## Skills
 
-- _Skill 1_
-- _Skill 2_
-- _Skill 3_
+- Design Engineering
+- User Experience Design
+- User Interface Design
+- Product Design
+- Mobile Design
+- Figma
+- Claude
 
 ## Experience
 
