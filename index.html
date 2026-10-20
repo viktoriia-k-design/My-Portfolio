@@ -1,0 +1,90 @@
+<!-- 1. Тип документа: каже браузеру, що це сучасний HTML5 -->
+<!DOCTYPE html>
+
+<!-- 2. Кореневий тег. lang="en" — мова сторінки (для пошуковиків і скрінрідерів) -->
+<html lang="en">
+
+  <!-- 3. <head> — службова інформація, яку не видно на сторінці -->
+  <head>
+    <!-- Кодування символів, щоб коректно показувались будь-які літери -->
+    <meta charset="UTF-8" />
+
+    <!-- Щоб сторінка правильно масштабувалась на телефонах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Назва вкладки в браузері -->
+    <title>My Portfolio</title>
+
+    <!-- Підключаємо Tailwind CSS. Після цього можна стилізувати елементи
+         класами прямо в HTML, без окремого .css файлу -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  </head>
+
+  <!-- 4. <body> — усе, що бачить користувач.
+       Класи Tailwind:
+       bg-slate-100   — світло-сірий фон
+       min-h-screen   — висота не менша за весь екран
+       flex items-center justify-center — ставимо вміст по центру
+       p-4            — внутрішній відступ (padding) 1rem з усіх боків -->
+  <body class="bg-slate-100 min-h-screen flex items-center justify-center p-4">
+
+    <!-- 5. Картка. <article> — самостійний блок контенту.
+         bg-white      — білий фон
+         rounded-2xl   — заокруглені кути
+         shadow-lg     — тінь
+         max-w-sm      — максимальна ширина (~384px)
+         w-full        — займає всю доступну ширину, але не більше max-w-sm
+         p-8           — внутрішній відступ 2rem -->
+    <article class="bg-white rounded-2xl shadow-lg max-w-sm w-full p-8">
+
+      <!-- Аватар: коло з ініціалами.
+           w-20 h-20     — розмір 5rem × 5rem
+           rounded-full  — робить коло
+           mx-auto       — центрує блок по горизонталі
+           mb-4          — відступ знизу (margin-bottom) -->
+      <div class="w-20 h-20 rounded-full bg-indigo-500 text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4">
+        VK
+      </div>
+
+      <!-- Імʼя та посада.
+           text-xl / text-sm — розмір шрифту
+           font-semibold     — напівжирний
+           text-center       — вирівнювання тексту по центру -->
+      <h1 class="text-xl font-semibold text-slate-900 text-center">
+        Viktoriia Komar
+      </h1>
+      <p class="text-sm text-indigo-600 text-center mb-4">
+        Senior Product Designer
+      </p>
+
+      <!-- Короткий опис.
+           leading-relaxed — більший міжрядковий інтервал -->
+      <p class="text-slate-600 text-center leading-relaxed mb-6">
+        I’m a Senior Product Designer with 9+ years of experience designing digital products.
+      </p>
+
+      <!-- Список навичок у вигляді «тегів».
+           flex flex-wrap  — елементи в рядок і переносяться на новий рядок
+           gap-2           — проміжок між ними
+           <ul>/<li>       — список (ul = unordered list, li = list item) -->
+      <ul class="flex flex-wrap justify-center gap-2 mb-6">
+        <li class="bg-indigo-50 text-indigo-700 text-xs font-medium px-3 py-1 rounded-full">Product Design</li>
+        <li class="bg-indigo-50 text-indigo-700 text-xs font-medium px-3 py-1 rounded-full">UX Design</li>
+        <li class="bg-indigo-50 text-indigo-700 text-xs font-medium px-3 py-1 rounded-full">UI Design</li>
+        <li class="bg-indigo-50 text-indigo-700 text-xs font-medium px-3 py-1 rounded-full">Figma</li>
+      </ul>
+
+      <!-- Кнопка-посилання.
+           block w-full     — на всю ширину картки
+           hover:bg-indigo-600 — інший колір, коли наводиш мишку
+           transition       — плавна зміна кольору -->
+      <a
+        href="mailto:your.email@example.com"
+        class="block w-full text-center bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 rounded-xl transition"
+      >
+        Contact me
+      </a>
+    </article>
+
+  </body>
+</html>
